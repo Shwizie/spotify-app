@@ -9,29 +9,29 @@
     font-family: 'Metropolis';
     font-weight: 100;
     font-style: italic;
-    src: url(ASSETS/FONTS/Metropolis-ThinItalic.otf);
+    src: url(ASSETS/FONTS/Metropolis-ThinItalic.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 200;
-    src: url(ASSETS/FONTS/Metropolis-ExtraLight.otf);
+    src: url(ASSETS/FONTS/Metropolis-ExtraLight.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 200;
     font-style: italic;
-    src: url(ASSETS/FONTS/Metropolis-ExtraLightItalic.otf);
+    src: url(ASSETS/FONTS/Metropolis-ExtraLightItalic.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 300;
-    src: url(ASSETS/FONTS/Metropolis-Light.otf);
+    src: url(ASSETS/FONTS/Metropolis-Light.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 300;
     font-style: italic;
-    src: url(ASSETS/FONTS/Metropolis-LightItalic.otf);
+    src: url(ASSETS/FONTS/Metropolis-LightItalic.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
@@ -42,62 +42,62 @@
     font-family: 'Metropolis';
     font-weight: 400;
     font-style: italic;
-    src: url(ASSETS/FONTS/Metropolis-RegularItalic.otf);
+    src: url(ASSETS/FONTS/Metropolis-RegularItalic.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 500;
-    src: url(ASSETS/FONTS/Metropolis-Medium.otf);
+    src: url(ASSETS/FONTS/Metropolis-Medium.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 500;
     font-style: italic;
-    src: url(ASSETS/FONTS/Metropolis-MediumItalic.otf);
+    src: url(ASSETS/FONTS/Metropolis-MediumItalic.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 600;
-    src: url(ASSETS/FONTS/Metropolis-SemiBold.otf);
+    src: url(ASSETS/FONTS/Metropolis-SemiBold.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 600;
     font-style: italic;
-    src: url(ASSETS/FONTS/Metropolis-SemiBoldItalic.otf);
+    src: url(ASSETS/FONTS/Metropolis-SemiBoldItalic.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 700;
-    src: url(ASSETS/FONTS/Metropolis-Bold.otf);
+    src: url(ASSETS/FONTS/Metropolis-Bold.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 700;
     font-style: italic;
-    src: url(ASSETS/FONTS/Metropolis-BoldItalic.otf);
+    src: url(ASSETS/FONTS/Metropolis-BoldItalic.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 800;
-    src: url(ASSETS/FONTS/Metropolis-ExtraBold.otf);
+    src: url(ASSETS/FONTS/Metropolis-ExtraBold.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 800;
     font-style: italic;
-    src: url(ASSETS/FONTS/Metropolis-ExtraBoldItalic.otf);
+    src: url(ASSETS/FONTS/Metropolis-ExtraBoldItalic.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 900;
-    src: url(ASSETS/FONTS/Metropolis-Black.otf);
+    src: url(ASSETS/FONTS/Metropolis-Black.otf) format('otf');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 900;
     font-style: italic;
-    src: url(ASSETS/FONTS/Metropolis-BlackItalic.otf);
+    src: url(ASSETS/FONTS/Metropolis-BlackItalic.otf) format('otf');
 }
 
 :root {
