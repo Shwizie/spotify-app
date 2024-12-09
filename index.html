@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/13706f0fd6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/ASSETS/CSS/style.css">
+    <link rel="stylesheet" href="/ASSETS/CSS/bg.css">
+    <title>Connect to Spotify</title>
+</head>
+<body onload="onPageLoad()">
+
+    <div class="bgwrapper">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="shadow">
+            <div class="wrapper">
+                <div class="title">
+                    <p>Shwizie's Spotify Widget</p>
+                </div>
+                <div class="button">
+                    <input id="connect" class="btn input" type="button" value="..." onclick="requestAuthorization()">
+                    <div>
+                        <i id="crossico" class="cross fa-solid fa-circle-xmark hide" onclick="disconnect()"></i>
+                        <input id="copy" class="inputt hide" type="password" readonly placeholder="poopie">
+                    <i id="eyeico" class="eye fa-solid fa-eye-slash hide" onclick="showIt()"></i>
+                    </div>
+                    
+                    <i id="spotico" class="icosize fa-brands fa-spotify"></i>
+                    <div class="tooltip">
+                        <i id="copyico" class="icosize fa-solid fa-clipboard hide" onclick="copyCode()" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip">Copy</span></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    
+    <script type="text/javascript" src="/ASSETS/JAVASCRIPT/script.js"></script>
+</body>
+</html>
