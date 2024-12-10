@@ -44,7 +44,7 @@ function requestAuthorization() {
     url += "?client_id=" + client_id;
     url += "&response_type=code";
     url += "&redirect_uri=" + encodeURI(redirect_uri);
-    url += "&show_dialog=true";
+    url += "&show_dialog=false";
     url += "&scope=" + scopes;
     window.location.href = url;
 }
