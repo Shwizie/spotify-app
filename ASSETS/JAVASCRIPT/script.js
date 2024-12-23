@@ -1,4 +1,4 @@
-var redirect_uri = 'http://127.0.0.1:5500/index.html';
+var redirect_uri = 'https://shwizie.github.io/spotify-app/';
 var client_id = '2783c30aabce4354abf0ea968e643045';
 var client_secret = 'fff0e6ff640843299fdbaeb8db69774d';
 const AUTHORIZE = 'https://accounts.spotify.com/authorize';

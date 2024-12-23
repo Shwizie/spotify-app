@@ -68,7 +68,7 @@ body {
     width: 1000px;
     box-shadow: var(--shadow);
     font-size: var(--f-500);
-    background-image: url(/ASSETS/IMAGES/885026.png);
+    background-image: url(../IMAGES/885026.png);
     background-size: cover;
 }
 
