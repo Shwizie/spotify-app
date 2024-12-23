@@ -1,104 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 100;
-    src: url(/ASSETS/FONTS/Metropolis-Thin.otf) format('otf');
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 100;
-    font-style: italic;
-    src: url(/ASSETS/FONTS/Metropolis-ThinItalic.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 200;
-    src: url(/ASSETS/FONTS/Metropolis-ExtraLight.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 200;
-    font-style: italic;
-    src: url(/ASSETS/FONTS/Metropolis-ExtraLightItalic.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 300;
-    src: url(/ASSETS/FONTS/Metropolis-Light.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 300;
-    font-style: italic;
-    src: url(/ASSETS/FONTS/Metropolis-LightItalic.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 400;
-    src: url(/ASSETS/FONTS/Metropolis-Regular.otf) format('otf');
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 400;
-    font-style: italic;
-    src: url(/ASSETS/FONTS/Metropolis-RegularItalic.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 500;
-    src: url(/ASSETS/FONTS/Metropolis-Medium.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 500;
-    font-style: italic;
-    src: url(/ASSETS/FONTS/Metropolis-MediumItalic.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 600;
-    src: url(/ASSETS/FONTS/Metropolis-SemiBold.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 600;
-    font-style: italic;
-    src: url(/ASSETS/FONTS/Metropolis-SemiBoldItalic.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 700;
-    src: url(/ASSETS/FONTS/Metropolis-Bold.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 700;
-    font-style: italic;
-    src: url(/ASSETS/FONTS/Metropolis-BoldItalic.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 800;
-    src: url(/ASSETS/FONTS/Metropolis-ExtraBold.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 800;
-    font-style: italic;
-    src: url(/ASSETS/FONTS/Metropolis-ExtraBoldItalic.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 900;
-    src: url(/ASSETS/FONTS/Metropolis-Black.otf);
-}
-@font-face {
-    font-family: 'Metropolis';
-    font-weight: 900;
-    font-style: italic;
-    src: url(/ASSETS/FONTS/Metropolis-BlackItalic.otf);
-}
+@import url('https://cdn.jsdelivr.net/gh/Shwizie/Fonts@latest/Metropolis/Metropolis.css');
 
 :root {
     --font: 'Metropolis', sans-serif;
@@ -158,9 +59,7 @@ body {
     height: 100%;
     background: linear-gradient(45deg, #099b21bb, #55e273be);
     background-size: cover;
-    /* backdrop-filter: blur(0px); */
     border-radius: 50px;
-    /* backdrop-filter: blur(24px); */
 }
 
 .shadow {
@@ -182,16 +81,16 @@ body {
 .title p {
     margin: auto;
     display: block;
-    /* position: absolute; */
     left: 50%;
     top: 45%;
     font-size: var(--f-900);
     font-weight: 900;
-    /* font-style: italic; */
+    font-style: italic;
     color: var(--bg);
     text-transform: uppercase;
     text-align: center;
     margin-top: -50px;
+    user-select: none;
 }
 
 .button {
@@ -203,6 +102,7 @@ body {
 
 .btn {
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .button .input, .inputt {
@@ -214,10 +114,8 @@ body {
     margin: auto;
     margin-bottom: 30px;
     margin-top: 20px;
-    /* display: block. */
     background: linear-gradient(45deg, #000000c0, #000000a2);
     color: #FFF;
-    
     font-weight: 900;
     font-style: italic;
 }
@@ -230,15 +128,17 @@ body {
     transform: scale(0.98, 0.98);
 }
 .button i {
-    /* font-size: var(--f-700); */
     border: none;
     border-radius: 50px;
     padding: 20px 20px;
     transition: background 450ms, color 450ms, transform 250ms;
     margin: auto;
-    /* display: block. */
-    
     color: #FFF;
+    cursor: pointer;
+}
+
+.authCode {
+    user-select: none;
 }
 
 .icosize {
@@ -266,44 +166,49 @@ body {
     transform: scale(0.98, 0.98);
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
+#copyico.vibrate {
+    animation: vibrate 0.5s ease-in-out;
 }
 
-.tooltip .tooltiptext {
+#snackbar {
     visibility: hidden;
-    width: 150px;
-    background: linear-gradient(45deg, #000000c0, #000000a2);
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #000000c0;
     color: #fff;
     text-align: center;
-    border-radius: 10px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 90%;
+    border-radius: 50px;
+    padding: 16px;
+    position: fixed;
     left: 50%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 20px;
-    font-family: var(--font);
-    font-weight: 200;
+    bottom: 30px;
+    user-select: none;
 }
 
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #000000c0 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
+#snackbar.show {
     visibility: visible;
-    opacity: 1;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes vibrate {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    20%, 60% {
+        transform: rotate(10deg);
+    }
+    40%, 80% {
+        transform: rotate(-10deg);
+    }
 }
 

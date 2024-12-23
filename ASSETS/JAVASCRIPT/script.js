@@ -44,7 +44,7 @@ function requestAuthorization() {
     url += "?client_id=" + client_id;
     url += "&response_type=code";
     url += "&redirect_uri=" + encodeURI(redirect_uri);
-    url += "&show_dialog=true";
+    url += "&show_dialog=false";
     url += "&scope=" + scopes;
     window.location.href = url;
 }
@@ -92,13 +92,23 @@ function copyCode() {
     authID.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(authID.value);
 
-    var tooltip = document.getElementById('myTooltip');
-    tooltip.innerHTML = "Copied";
+    showCopy();
+    vibrate();
 }
 
-function outFunc() {
-    var tooltip = document.getElementById('myTooltip');
-    tooltip.innerHTML = "Copy";
+function showCopy() {
+    var snackbar = document.getElementById('snackbar');
+    snackbar.classList.add("show");
+    setTimeout(function() {
+        snackbar.classList.remove("show");
+    }, 3000);
+}
+
+function vibrate() {
+    copyico.classList.add("vibrate");
+    setTimeout(function() {
+        copyico.classList.remove("vibrate");
+    }, 1000);
 }
 
 function showIt() {
