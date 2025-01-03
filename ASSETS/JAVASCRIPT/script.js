@@ -3,6 +3,7 @@ var client_id = '2783c30aabce4354abf0ea968e643045';
 var client_secret = 'fff0e6ff640843299fdbaeb8db69774d';
 const AUTHORIZE = 'https://accounts.spotify.com/authorize';
 var check;
+var refreshed;
 
 let btn = document.getElementById('connect');
 let authID = document.getElementById('copy');
@@ -10,18 +11,27 @@ let spotico = document.getElementById('spotico');
 let copyico = document.getElementById('copyico');
 let eyeico = document.getElementById('eyeico');
 let crossico = document.getElementById('crossico');
+let rotateico = document.getElementById('rotateico');
 
 function onPageLoad() {
+    
     if (window.location.search.length > 0) {
         handleRedirect();
     }
     else {
         check = localStorage.getItem('AuthCode');
+        refreshed = localStorage.getItem('refreshed');
         if (check == 'null' || check == null) {
             btn.value = 'Connect to Spotify';
         }
+        else if (refreshed == 'true' || refreshed == true){
+            connected()
+            snackbar("Code Refreshed");
+            localStorage.setItem('refreshed', null);
+        }
         else {
             connected();
+            snackbar("Connected");
         }
     }
 }
@@ -74,10 +84,12 @@ function connected() {
     authID.value = localStorage.getItem('AuthCode');
     eyeico.classList.remove('hide');
     crossico.classList.remove('hide');
+    rotateico.classList.remove('hide');
 }
 
 function disconnect() {
     localStorage.setItem('AuthCode', null);
+    localStorage.setItem('refreshed', null);
     btn.classList.remove('hide');
     btn.value = 'Connect to Spotify';
     authID.classList.add('hide');
@@ -85,6 +97,15 @@ function disconnect() {
     copyico.classList.add('hide');
     eyeico.classList.add('hide');
     crossico.classList.add('hide');
+    rotateico.classList.add('hide');
+
+    snackbar("Disconnected")
+}
+
+function refresh() {
+    localStorage.setItem('refreshed', true);
+    requestAuthorization();
+    spin();
 }
 
 function copyCode() {
@@ -92,16 +113,23 @@ function copyCode() {
     authID.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(authID.value);
 
-    showCopy();
+    snackbar("Copied");
     vibrate();
 }
 
-function showCopy() {
-    var snackbar = document.getElementById('snackbar');
-    snackbar.classList.add("show");
+function snackbar(messgae) {
+    var el = document.createElement("div");
+    el.className = "snackbar";
+    var sContainer = document.getElementById("snackbar-container");
+    el.innerHTML = messgae;
+    sContainer.append(el);
+    el.className = "snackbar show";
     setTimeout(function() {
-        snackbar.classList.remove("show");
-    }, 3000);
+        el.className = el.className.replace("snackbar show", "snackbar");
+    }, 3000)
+    setTimeout(function() {
+        el.remove();
+    }, 3500)
 }
 
 function vibrate() {
@@ -109,6 +137,13 @@ function vibrate() {
     setTimeout(function() {
         copyico.classList.remove("vibrate");
     }, 1000);
+}
+
+function spin() {
+    rotateico.classList.add("spin");
+    setTimeout(function() {
+        rotateico.classList.remove("spin");
+    }, 500);
 }
 
 function showIt() {
