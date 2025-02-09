@@ -47,8 +47,10 @@ function requestAuthorization() {
     let readRecent = 'user-read-recently-played';
     let readPravatePl = 'playlist-read-private';
     let modLibrary = 'user-library-modify';
+    let modPrivatePl = 'playlist-modify-private';
+    let modPublicPl = 'playlist-modify-public';
 
-    let scopes = `${readPrivate} ${readEmail} ${modPlayback} ${readPlaybackPos} ${readLibrary} ${stream} ${readPlaybackState} ${readRecent} ${readPravatePl} ${modLibrary}`; 
+    let scopes = `${readPrivate} ${readEmail} ${modPlayback} ${readPlaybackPos} ${readLibrary} ${stream} ${readPlaybackState} ${readRecent} ${readPravatePl} ${modLibrary} ${modPrivatePl} ${modPublicPl}`; 
 
     let url = AUTHORIZE;
     url += "?client_id=" + client_id;
