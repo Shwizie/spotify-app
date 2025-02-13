@@ -10,13 +10,13 @@
 6. !sr *song name* - *artist*:
    - Add song to queue
 7. !queue/q:
-   - get the current queue
+   - Get the current queue
 8. !link:
-   - get like of currently playing song
+   - Get like of currently playing song
 9. !prevlink:
-    - get link of previous song
+    - Get link of previous song
 10. !add *song name* - *artist*:
-    - add song to selected playlist
+    - Add song to selected playlist
 
 # Mods:
 1. !like:
@@ -28,8 +28,8 @@
 4. !esr:
    - Enable song Request
 5. !dsr:
-   - disable song requests
+   - Disable song requests
 6. !create *playlist name*:
-   - create a playlist with specified name
+   - Create a playlist with specified name
 7. !select *playlist name*:
-   - select a playlist
+   - Select a playlist
