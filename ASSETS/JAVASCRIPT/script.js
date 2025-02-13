@@ -1,6 +1,7 @@
 var redirect_uri = 'https://shwizie.github.io/spotify-app/';
-var client_id = '2783c30aabce4354abf0ea968e643045';
-var client_secret = 'fff0e6ff640843299fdbaeb8db69774d';
+import { sclient_id, sclient_secret} from "./secret.js";
+let client_id = sclient_id;
+let client_secret = sclient_secret;
 const AUTHORIZE = 'https://accounts.spotify.com/authorize';
 var check;
 var refreshed;
