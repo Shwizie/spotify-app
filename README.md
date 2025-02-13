@@ -1,35 +1,35 @@
 # Spotify Widget Commands
 
 ## Everybody:
-### !song/np: 
- - Get currently playing song
-### !play
-### !pause
-### !next/skip
-### !prev/previous
-### !sr *song name* *artist*:
- - Add song to queue
-### !queue/q:
- - get the current queue
-### !link:
- - get like of currently playing song
-### !prevlink:
- - get link of previous song
-### !add *song name* *artist*:
- - add song to selected playlist
+1. !song/np:
+   - Get currently playing song
+2. !play
+3. !pause
+4. !next/skip
+5. !prev/previous
+6. !sr *song name* *artist*:
+   - Add song to queue
+7. !queue/q:
+   - get the current queue
+8. !link:
+   - get like of currently playing song
+9. !prevlink:
+    - get link of previous song
+10. !add *song name* *artist*:
+    - add song to selected playlist
 
 ## Mods:
-### !like:
- - Like current song
-### !unlike:
- - Unlike current song
-### !srs:
- - Check song request status (enable/disabled)
-### !esr:
- - Enable song Request
-### !dsr:
- - disable song requests
-### !create *playlist name*:
- - create a playlist with specified name
-### !select *playlist name*:
- - select a playlist
+1. !like:
+   - Like current song
+2. !unlike:
+   - Unlike current song
+3. !srs:
+   - Check song request status (enable/disabled)
+4. !esr:
+   - Enable song Request
+5. !dsr:
+   - disable song requests
+6. !create *playlist name*:
+   - create a playlist with specified name
+7. !select *playlist name*:
+   - select a playlist
